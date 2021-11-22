@@ -24,8 +24,12 @@ class MainActivity : AppCompatActivity() {
         //countriesListView = findViewById(R.id.countriesList)
 
         bindingActivityMain.btn1.setOnClickListener() {
-            countries = arrayOf("Бразилия", "Аргентина", "Колумбия", "Чили", "Уругвай")
-            var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
+            countries = arrayOf(
+                "Бразилия", "Аргентина", "Колумбия", "Чили", "Уругвай", "Бразилия",
+                "Аргентина", "Колумбия", "Чили", "Уругвай", "Бразилия", "Аргентина", "Колумбия",
+                "Чили", "Уругвай"
+            )
+            var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries.sortedArray())
             bindingActivityMain.countriesList.adapter = adapter
         }
     }
